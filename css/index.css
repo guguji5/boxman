@@ -1,4 +1,4 @@
-.wrap{width:450px;height:450px;margin:100px auto;position:relative}
+.wrap{width:450px;height:450px;margin:90px auto;position:relative}
 .map0{width:50px;height:50px;background:#999;float:left}/*背景颜色*/
 .map1{width:50px;height:50px;background:url("../img/wall.png") no-repeat;float:left}/*墙的颜色*/
 .map2{width:50px;height:50px;background:url("../img/blue.png") no-repeat;float:left}/*墙内*/

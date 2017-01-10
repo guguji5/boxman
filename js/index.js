@@ -18,7 +18,7 @@ function move(tort){
 			if(Game.checkKnockWall()){tort.x++}//如果撞墙了，就往回退一步
 			
 				for(var i=0;i<Game.box.length;i++)
-				{   if(Game.checkKnockBox()){//如果装着箱子，就把箱子也向前走一步
+				{   if(Game.checkKnockBox()){//如果撞着箱子，就把箱子也向前走一步
 						if(Game.XYcheck({x:tort.x,y:tort.y},Game.box[i]))
 						{
 							$(".box").eq(i).css("left",--Game.box[i].x*50+"px")
@@ -37,7 +37,7 @@ function move(tort){
 			if(Game.checkKnockWall()){tort.y++}
 			for(var i=0;i<Game.box.length;i++)
 			{ 
-				if(Game.checkKnockBox()){//如果装着箱子，就把箱子也向前走一步
+				if(Game.checkKnockBox()){//如果撞着箱子，就把箱子也向前走一步
 					if(Game.XYcheck({x:tort.x,y:tort.y},Game.box[i]))
 					{
 						$(".box").eq(i).css("top",--Game.box[i].y*50+"px")
@@ -57,7 +57,7 @@ function move(tort){
 			if(Game.checkKnockWall()){tort.x--};
 			for(var i=0;i<Game.box.length;i++)
 			{ 
-				if(Game.checkKnockBox()){//如果装着箱子，就把箱子也向前走一步
+				if(Game.checkKnockBox()){//如果撞着箱子，就把箱子也向前走一步
 						if(Game.XYcheck({x:tort.x,y:tort.y},Game.box[i]))
 						{
 							$(".box").eq(i).css("left",++Game.box[i].x*50+"px")
@@ -211,7 +211,7 @@ var Game={
 			}
 		if(num==Game.box.length)
 		{
-			alert("congratulation")
+			console.log("congratulation")
 			$(".wrap").css({"width":"400px","height":"400px"})
 			this.map=this.map1;
 			this.box=this.box1;	
